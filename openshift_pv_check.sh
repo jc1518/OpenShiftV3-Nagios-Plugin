@@ -43,6 +43,8 @@ if [ $message_exit -ge 100 ]; then
         exit 2
 elif [ $message_exit -ge 1 ]; then
         exit 1
+elif [[ $(echo $message_text | grep -c full) -lt 1 ]]; then
+        exit 3
 else
         exit 0
 fi
