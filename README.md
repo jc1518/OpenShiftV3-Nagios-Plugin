@@ -30,6 +30,6 @@ oc describe secret nagios-token-xxxx
 ## Usage
 **Persisent storage usage monitor**
 ```bash
-/usr/local/nagios/libexec/openshift_pv_check.sh *project_name*
+/usr/local/nagios/libexec/openshift_pv_check.sh project_name
 ```
 ![pv](files/pv.png)
