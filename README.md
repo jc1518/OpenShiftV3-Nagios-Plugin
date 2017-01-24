@@ -6,12 +6,12 @@ By the time of writing, OpenShift V3 comes with poor monitoring capabilities. Th
 
 This project aims to develop some Nagios plugins for OpenShift V3. Here are the plugins that are available now:
 
-- [x] Persisent storage usage monitor
+[x] Persisent storage usage monitor
 
 ## Installations  
 
-1. Install OpenShift client (oc) on your Nagios box.   
-2. Create a monitoring account, then get the token. 
+- Install OpenShift client (oc) on your Nagios box.   
+- Create a monitoring account, then get the token. 
 ```bash
 echo '{
   "apiVersion": "v1",
@@ -25,7 +25,7 @@ oc adm policy add-cluster-role-to-user cluster-reader system:serviceaccount:defa
 oc get secrets
 oc describe secret nagios-token-xxxx
 ```
-3. Copy the plugin file into the Nagios libexec folder, typically it is /usr/local/nagios/libexec/. Then replace thisisyourtoken... with the token you got above in 'your_token=thisisyourtokenpleasekeepitsecureyour'.
+- Copy the plugin file into the Nagios libexec folder, typically it is /usr/local/nagios/libexec/. Then replace thisisyourtoken... with the token you got above in 'your_token=thisisyourtokenpleasekeepitsecureyour'.
 
 ## Usage
 **Persisent storage usage monitor**
