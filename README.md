@@ -28,8 +28,8 @@ oc describe secret nagios-token-xxxx
 3. Copy the plugin file into the Nagios libexec folder, typically it is /usr/local/nagios/libexec/. Then replace thisisyourtoken... with the token you got above in 'your_token=thisisyourtokenpleasekeepitsecureyour'.
 
 ## Usage
-** Persisent storage usage monitor
+**Persisent storage usage monitor**
 ```bash
-/usr/local/nagios/libexec/openshift_pv_check.sh project_name
+/usr/local/nagios/libexec/openshift_pv_check.sh *project_name*
 ```
 ![pv](files/pv.png)
