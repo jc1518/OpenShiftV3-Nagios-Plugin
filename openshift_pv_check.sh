@@ -2,7 +2,7 @@
 # Monitor Openshift V3 persisent storage usage
 
 project=$1
-your_token=thisisyourtokenpleasekeepitsecure
+your_token='thisisyourtokenpleasekeepitsecure'
 
 if [ -z $1 ]; then
         echo "Project name is required"
