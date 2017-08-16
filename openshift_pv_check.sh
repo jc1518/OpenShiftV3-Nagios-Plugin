@@ -14,7 +14,7 @@ message_text="Disk Usage:"
 message_exit=0
 
 date > /tmp/ospv.log
-/usr/bin/oc login https://api.newscorpau01.openshift.com --token=$your_token >> /tmp/ospv.log 2>&1
+/usr/bin/oc login https://api.mycompany.openshift.com --token=$your_token >> /tmp/ospv.log 2>&1
 /usr/bin/oc project $project >> /tmp/ospv.log 2>&1
 pods=$(/usr/bin/oc get pods | grep -v -e build -e NAME | awk '{print $1}')
 for pod in $pods
