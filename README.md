@@ -13,16 +13,11 @@ This project aims to develop some Nagios plugins for OpenShift V3. Here are the 
 - Install OpenShift client (oc) on your Nagios box.   
 - Create a monitoring account, then get the token. 
 ```bash
-echo '{
-  "apiVersion": "v1",
-  "kind": "ServiceAccount",
-  "metadata": {
-    "name": "nagios"
-  }
-}' > nagiosSA.json
-oc create -f nagiosSA.json
+# Create service account named nagios
+oc create sa nagios
 # Use this token to replace 'thisisyourtokenpleasekeepitsecure' in the plugin
 oc sa get-token nagios
+# Grant edit role
 oc policy add-role-to-user edit -z nagios
 # If you need to use service account in project-A to monitor project-B
 oc policy add-role-to-group edit system:serviceaccounts:<project-A>:nagios -n <project-B>
