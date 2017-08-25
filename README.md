@@ -20,7 +20,7 @@ oc sa get-token nagios
 # Grant edit role
 oc policy add-role-to-user edit -z nagios
 # If you need to use service account in project-A to monitor project-B
-oc policy add-role-to-user edit system:serviceaccounts:<project-A>:nagios -n <project-B>
+oc policy add-role-to-group edit system:serviceaccounts:<project-A> -n <project-B>
 ```
 - Copy the plugin file into the Nagios libexec folder, typically it is /usr/local/nagios/libexec/. Then replace thisisyourtoken... with the token you got above in 'your_token=thisisyourtokenpleasekeepitsecureyour'.
 
